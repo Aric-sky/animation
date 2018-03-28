@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03-bobbing-2</title>
+  <link rel="stylesheet" href="../common/style.css">
+</head>
+
+<body>
+  <canvas id="canvas" width="400" height="400"></canvas>
+  <script src="../common/utils.js" charset="utf-8"></script>
+  <script src="../common/ball.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    /**
+     * 一个上下运动的球（可调参数版）
+     * */
+    window.onload = function () {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      const ball = new Ball();
+      let angle = 0;
+      // 运动中心
+      const clientY = 200;
+      // 范围
+      const range = 50;
+      // 速度
+      const speed = 0.05;
+
+      ball.x = canvas.width / 2;
+      ball.y = canvas.height / 2;
+
+      (function drawFrame() {
+        window.requestAnimationFrame(drawFrame, canvas);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        ball.y = clientY + Math.sin(angle) * range;
+        angle += speed;
+        ball.draw(context);
+      }());
+    };
+  </script>
+</body>
+
+</html>
