@@ -1,2 +1,2 @@
-# H5Learning-animationDemo
-some demos about learning Foundation HTML5 Animation with JavaScript.
+# H5-animationDemo
+canvas mostly use
