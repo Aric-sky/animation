@@ -1,4 +1,38 @@
+```
+# Dependencies
 node_modules/
+
+# Build outputs
+dist/
 build/
-npm-debug.log
+coverage/
+
+# Environment variables
+.env
+.env.local
+.env.*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
+
+# Python cache (if any Python files exist in the project)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# OS generated files
 .DS_Store
+Thumbs.db
+```
